@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.ins</groupId>
-	<artifactId>feleetcar</artifactId>
+	<artifactId>feleetcar</artifactId> 
 	<version>0.0.1-SNAPSHOT</version>
 	<name>feleetcar</name>
 	<description>Solutions de gestion parc automobile</description>
