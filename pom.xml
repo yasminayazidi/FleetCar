@@ -10,7 +10,7 @@
 		<version>3.2.1</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.ins</groupId>
+	<groupId>com.ins</groupId> 
 	<artifactId>feleetcar</artifactId> 
 	<version>0.0.1-SNAPSHOT</version>
 	<name>feleetcar</name>
