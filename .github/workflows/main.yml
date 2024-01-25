@@ -29,7 +29,11 @@ jobs:
       #Build the application using Maven
       - name: Build with Maven
         #run: mvn -X package -DskipTests --file pom.xml
-        run: mvn clean install
+        run:
+          mvn clean install \
+          -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn \
+          -q \
+          -Dmaven.test.skip=true
       - name: Upload JAR
         # We upload so we can re-use same jar in next job.
         uses: actions/upload-artifact@v2
