@@ -19,18 +19,9 @@ jobs:
         with:
           java-version: '17.0.2'
       #Set up Maven cache
-      - name: Cache Maven packages
-        #This action allows caching dependencies and build outputs to improve workflow execution time.
-        #uses: actions/cache@v1
-        #with:
-        run:
-          mvn clean install 
-          #path: ~/.m2
-          #key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
-          #restore-keys: ${{ runner.os }}-m2
       #Build the application using Maven
       - name: Build with Maven
-        run: mvn -X package -DskipTests --file pom.xml
+        run: mvn clean install -DskipTests
         #run:
           #mvn clean install \
           #-Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn \
