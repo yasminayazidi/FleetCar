@@ -17,18 +17,16 @@ jobs:
       - name: Set up JDK 
         uses: actions/setup-java@v1
         with:
-          java-version: '8'
+          java-version: '17.0.2'
       #Set up Maven cache
-      - name: Cache Maven packages
-        #This action allows caching dependencies and build outputs to improve workflow execution time.
-        uses: actions/cache@v1
-        with:
-          path: ~/.m2
-          key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
-          restore-keys: ${{ runner.os }}-m2
       #Build the application using Maven
       - name: Build with Maven
-        run: mvn -X package -DskipTests --file pom.xml
+        run: mvn clean install #-DskipTests
+        #run:
+          #mvn clean install \
+          #-Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn \
+          #-q \
+          #-Dmaven.test.skip=true
       - name: Upload JAR
         # We upload so we can re-use same jar in next job.
         uses: actions/upload-artifact@v2
