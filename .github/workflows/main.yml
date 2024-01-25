@@ -21,7 +21,7 @@ jobs:
       #Set up Maven cache
       #Build the application using Maven
       - name: Build with Maven
-        run: mvn clean install -DskipTests
+        run: mvn clean install #-DskipTests
         #run:
           #mvn clean install \
           #-Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn \
