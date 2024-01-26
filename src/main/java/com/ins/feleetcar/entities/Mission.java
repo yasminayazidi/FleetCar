@@ -1,5 +1,6 @@
 package com.ins.feleetcar.entities;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
@@ -21,9 +22,18 @@ public class Mission extends CommunEntity{
     private Car car;
     @ManyToOne
     private Driver driver;
-    private LocalDate startDate;
-    private LocalDate endDate;
-    private boolean isApproved;
-    private boolean isFinished;
+    private String description;
+    private LocalDate dateDebut;
+    private LocalDate dateFin;
+    private String status;
+    private LocalDate created_at;
+    private int start_km;
+    private int end_km;
+    private String start_state;
+    private String end_state;
+    private String driver_License;
+    private boolean is_delete;
+    @Column(insertable=false, updatable=false)
+    private int parc_id;
 
 }

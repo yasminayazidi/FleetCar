@@ -7,6 +7,8 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
+import java.time.LocalDate;
+
 @Data
 @EqualsAndHashCode(callSuper = true)
 @NoArgsConstructor
@@ -15,10 +17,17 @@ import lombok.NoArgsConstructor;
 @Table
 public class Car extends CommunEntity {
     private String brand;
+    private String mat;
+    private String fuel;
+    private LocalDate circulationDate;
+    private String power;
     private String model;
-    private Integer trunkCapacity;
+    private Integer nbrPlace;
     private String description;
-    private Integer year;
-    private Integer seats;
-    private String imageUrl;
+    private String couleur;
+    private boolean isDelete;
+    private String photoVoiture;
+
+
+
 }

@@ -21,5 +21,5 @@ public class DriverDto {
     private String state;
     private String login;
     private String password;
-    private int entrepriseId;
+    private int parc_id;
 }
