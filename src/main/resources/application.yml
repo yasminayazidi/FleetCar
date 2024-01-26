@@ -15,7 +15,7 @@ spring:
       format_sql: true
     database: postgresql
 server:
-  port: 8081
+  port: 5000
 #
 #flickr:
 #  apiKey: cffefaa99a2f4be8daafe309c3b3b17e
