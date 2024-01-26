@@ -3,7 +3,7 @@ spring:
     driver-class-name: org.postgresql.Driver
     username: postgres
     password: Ins-1234
-    url: jdbc:postgresql://database-4.cfeq8e40iatk.eu-west-3.rds.amazonaws.com:5432/fleet
+    url: jdbc:postgresql://database-4.cfeq8e40iatk.eu-west-3.rds.amazonaws.com:5432/bd_initial
     platform: postgres
     initialization-mode: always
   jpa:
@@ -14,7 +14,8 @@ spring:
       ddl-auto: update
       format_sql: true
     database: postgresql
-server.port=5000
+server:
+  port: 5000
 #
 #flickr:
 #  apiKey: cffefaa99a2f4be8daafe309c3b3b17e
