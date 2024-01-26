@@ -14,8 +14,7 @@ spring:
       ddl-auto: update
       format_sql: true
     database: postgresql
-server:
-  port: 5000
+server.port=5000
 #
 #flickr:
 #  apiKey: cffefaa99a2f4be8daafe309c3b3b17e
