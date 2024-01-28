@@ -19,4 +19,5 @@ public class Driver extends Staff{
     private String drivingLicence;
     private LocalDate drivingDate;
     private String drivingPhoto;
+
 }

@@ -1,9 +1,6 @@
 package com.ins.feleetcar.entities;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.ManyToOne;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -33,7 +30,8 @@ public class Mission extends CommunEntity{
     private String end_state;
     private String driver_License;
     private boolean is_delete;
-    @Column(insertable=false, updatable=false)
-    private int parc_id;
+    @ManyToOne
+    @JoinColumn(name = "parc_id")
+    private Parc parc;
 
 }

@@ -13,6 +13,5 @@ public class CommunEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
-    @Column(name = "parc_id")
-    private int parc_id;
+
 }

@@ -5,22 +5,23 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@MappedSuperclass
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Staff {
+@Entity
+@Table
+public class AGENT_Parc {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int id;
-    private String name;
-    private String mail;
-    private String phone;
-    private String address;
-    private String info;
-    private String state;
-    private String login;
-    private String password;
+    private int idAgent;
+    private String login ;
+    private String motDEpasse ;
+    private String nom ;
+    private String prenom ;
+    private String mail ;
+    private String telephone;
+    private String adresse;
+    private Boolean isDelete ;
     @ManyToOne
     @JoinColumn(name = "parc_id")
     private Parc parc;

@@ -1,6 +1,8 @@
 package com.ins.feleetcar.entities;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -27,7 +29,9 @@ public class Car extends CommunEntity {
     private String couleur;
     private boolean isDelete;
     private String photoVoiture;
-
+    @ManyToOne
+    @JoinColumn(name = "parc_id")
+    private Parc parc;
 
 
 }

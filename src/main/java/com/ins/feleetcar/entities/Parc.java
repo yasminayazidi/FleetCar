@@ -10,15 +10,17 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Entity
 @Table
-
-public class Entreprise {
+public class Parc {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int id;
-    private String corporateName;
-    private String mail;
-    private String phone;
+    private int idParc ;
+    private String corporateName ;
+    private String phone ;
     private String address;
-    private String state;
+    private String mail;
     private String logo;
+    private Boolean isDelete;
+    @ManyToOne
+    @JoinColumn(name = "entreprise_id")
+    private Entreprise entreprise;
 }

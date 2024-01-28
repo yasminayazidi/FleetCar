@@ -10,15 +10,9 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Entity
 @Table
-
-public class Entreprise {
+public class Categorie_Amende {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int id;
-    private String corporateName;
-    private String mail;
-    private String phone;
-    private String address;
-    private String state;
-    private String logo;
+    private int idCategorie ;
+    private String TypeAmende ;
 }
